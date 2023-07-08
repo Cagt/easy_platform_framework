@@ -29,13 +29,10 @@ void device_init(void)
 	INIT_LIST_HEAD(&device_head_list);
 	const initFunc * p;
 		
-	for(p = &__qz_init_qz_init_start; p < &__qz_init_qz_init_end; p++){
+	for(p = &__qz_init_qz_init_start; p < &__qz_init_qz_init_end; p++){		//所有设备初始化
 		(*p)();
 	}
-//	servo_init();	//测试舵机
-//		motor_init();
-//	ps2_init();
-//	Mpu9250_init();
+
 }
 
 
