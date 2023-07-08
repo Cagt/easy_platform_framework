@@ -148,7 +148,7 @@ int main(void){
 
 ```
 ---
-## 基于青云驱动框架开发介绍
+## 驱动框架开发介绍
 
 ### 驱动开发流程
 1. 在 EQUIPMENT 中新建一个 xxx_device.c/h 
