@@ -21,7 +21,7 @@ typedef void (*initFunc)(void);
 #define USED               			__attribute__((used))  //告诉编译器不要删除未使用的节
 
 
-#define INSTALL_INIT(fn) \
+#define INSTALL_INIT(fn) \														//驱动的Init写好后放到Init代码体的下面
 			USED const initFunc __qz_init_##fn SECTION(".qz_init_fn") = fn
 				
 #define INSTALL_INIT_X(fn,x) \
@@ -56,7 +56,7 @@ typedef struct object_base{
 
 
 
-void device_init(void);						/* 所有的设备都可以添加到此初始化 */ //TODO 全自动初始化
+void device_init(void);						/* 所有的设备都可以添加到此初始化 */ 
 
  
 struct device_ops* find_device(char *name);
